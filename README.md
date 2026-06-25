@@ -48,7 +48,11 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 | 결과    | 실무자는 Data Studio에서 이벤트별 성과, 기간별 흐름, 방문자 성향, AI 추천 액션 데이터 기반으로 마케팅 의사결정 가능 |
 
 <br>
+
 ---
+
+<br>
+
 ## 2. [전체 시스템 구조 및 기술 스택]
 
 ### 전체 시스템 구조
@@ -86,7 +90,7 @@ flowchart TD
 | 컨테이너 | Docker, Artifact Registry |
 | 언어 | Python, SQL |
 
----
+<br>
 
 * [목차로 되돌아가기](#목차로-되돌아가기)
 ---
