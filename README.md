@@ -55,8 +55,8 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 ```mermaid
 flowchart TD
-    A["GA4 Raw Events"] --> B["BigQuery KPI Query"]
-    B --> C["KPI_EVENT_TEST"]
+    A["GA4 Raw Events"] --> B["EVENT KPI Query"]
+    B --> C["KPI_EVENT"]
 
     A --> D["User Segmentation Query"]
     D --> E["KPI_USER_CLASS"]
@@ -64,7 +64,7 @@ flowchart TD
 
     C --> F["Prompt Query"]
     F --> G["Vertex AI Gemini"]
-    G --> H["KPI_EVENT_TEST_AI_INSIGHTS"]
+    G --> H["KPI_EVENT_AI_INSIGHTS"]
 
     C --> I["Data Studio Dashboard"]
     H --> I
