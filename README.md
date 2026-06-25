@@ -58,7 +58,7 @@ flowchart TD
     A["GA4 Raw Events"] --> B["EVENT KPI Query"]
     B --> C["KPI_EVENT"]
 
-    A --> D["User Segmentation Query"]
+    A --> D["User Query"]
     D --> E["KPI_USER_CLASS"]
     E --> C
 
