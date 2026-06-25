@@ -10,7 +10,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 ---
 
-## DASHBORAD
+## PREVIEW
 ![대시보드 대표 화면](docs/images/01-main-dashboard.png)
 
 - X축: 페이지 반응 또는 전환 관련 지표
