@@ -13,7 +13,6 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 ## PREVIEW
 <p align="center">
   <img src="docs/images/유입이벤트.png" alt="유입 이벤트 대시보드" width="48%">
-  <img src="docs/images/매출이벤트.png" alt="매출 이벤트 대시보드" width="48%">
 </p>
 
 - X축: 페이지 반응 또는 전환 관련 지표
