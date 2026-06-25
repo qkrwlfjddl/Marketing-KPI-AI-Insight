@@ -51,3 +51,21 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 | 언어 | Python, SQL |
 
 ---
+## 3. 전체 시스템 구조
+
+```mermaid
+flowchart TD
+    A["GA4 Raw Events"] --> B["BigQuery KPI Query"]
+    B --> C["KPI_EVENT_TEST"]
+
+    A --> D["User Segmentation Query"]
+    D --> E["KPI_USER_CLASS"]
+    E --> C
+
+    C --> F["Prompt Query"]
+    F --> G["Vertex AI Gemini"]
+    G --> H["KPI_EVENT_TEST_AI_INSIGHTS"]
+
+    C --> I["Data Studio Dashboard"]
+    H --> I
+```
