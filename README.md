@@ -10,6 +10,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 ---
 <br>
+
 ## PREVIEW
 
 ### 기존 방식
@@ -91,8 +92,10 @@ flowchart LR
     H --> I
 ```
 
-GA4 원천 데이터를 BigQuery에서 이벤트 KPI와 유저 군집 데이터로 가공하고,  
+GA4 데이터를 BigQuery에서 이벤트 KPI와 유저 군집 데이터로 가공하고, 
+
 이 결과를 Vertex AI Gemini에 전달해 이벤트별 AI 인사이트를 생성했습니다.  
+
 최종 결과는 Data Studio 대시보드에서 확인할 수 있도록 구성했습니다.
 
 ---
