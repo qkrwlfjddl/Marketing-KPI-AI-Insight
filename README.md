@@ -12,10 +12,10 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 ## PREVIEW
 <p>
-  <img src="docs/images/singup_event.png" alt="이벤트 대시보드" width="100%">
+  <img src="docs/images/signup_event.png" alt="이벤트 대시보드" width="100%">
 </p>
 <p>
-  <img src="docs/images/singup_insights.png" alt="이벤트 대시보드" width="100%">
+  <img src="docs/images/signup_insights.png" alt="이벤트 대시보드" width="100%">
 </p>
 
 
