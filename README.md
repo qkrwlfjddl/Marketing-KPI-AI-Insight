@@ -23,6 +23,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 </p>
 
 <br>
+
 이벤트별 유입, 매출, 전환율 데이터를 각각 확인해야 했고,  
 성과가 좋은 이벤트와 개선이 필요한 이벤트를 빠르게 구분하기 어려웠습니다.
 
@@ -44,7 +45,9 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 <p>
     Vertex AI Gemini 기반 이벤트별 성과 요약 및 실행 액션 도출 화면
 </p>
+
 <br>
+
 3. 각 이벤트별 시간별 변화 차트
 <p>
   <img src="docs/images/event_timeflow.png" alt="AI 인사이트 대시보드" width="70%">
