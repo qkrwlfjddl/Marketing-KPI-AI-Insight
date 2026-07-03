@@ -32,7 +32,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 **1. 전체 이벤트 대시보드**
 
 <p>
-  <img src="docs/images/signup_event.png" alt="이벤트 성과 대시보드" width="70%">
+  <img src="docs/images/signup_event.png" alt="이벤트 성과 대시보드" width="100%">
 </p>
 
 <p>
@@ -47,7 +47,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 </p>
 
 <p>
-    Vertex AI Gemini 기반 이벤트별 성과 요약 및 실행 액션 도출 화면
+    Vertex AI Gemini 기반 이벤트별 성과 요약 및 실행 액션 도출
 </p>
 
 <br>
