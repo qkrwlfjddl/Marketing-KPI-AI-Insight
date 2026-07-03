@@ -18,7 +18,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 ### 기존 방식
 
 <p>
-  <img src="docs/images/orign_event.png" alt="이벤트 성과 대시보드" width="100%">
+  <img src="docs/images/orign_event.png" alt="이벤트 성과 대시보드" width="70%">
 </p>
 
 
@@ -27,7 +27,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 ### 구축 후
 <p>
-  <img src="docs/images/signup_event.png" alt="이벤트 성과 대시보드" width="100%">
+  <img src="docs/images/signup_event.png" alt="이벤트 성과 대시보드" width="70%">
 </p>
 
 <p>
@@ -39,7 +39,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 
 <p>
-  <img src="docs/images/signup_insights.png" alt="AI 인사이트 대시보드" width="100%">
+  <img src="docs/images/signup_insights.png" alt="AI 인사이트 대시보드" width="70%">
 </p>
 
 <p>
@@ -49,7 +49,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 </p>
 
 <p>
-  <img src="docs/images/event_timeflow.png" alt="AI 인사이트 대시보드" width="100%">
+  <img src="docs/images/event_timeflow.png" alt="AI 인사이트 대시보드" width="60%">
 </p>
 
 <p>
