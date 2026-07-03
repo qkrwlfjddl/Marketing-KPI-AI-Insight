@@ -208,7 +208,7 @@ GA4 이벤트 로그를 기반으로 유저의 행동을 세션 단위로 집계
 ### 3.2 이벤트 성과 분석
 
 <p>
-  <img src="docs/images/event_group_DS.png"  width="60%">
+  <img src="docs/images/event_group_DS.png"  width="50%">
 </p>
 
 이벤트별 유입, 페이지 반응, 구매전환, 참여전환, 매출 성과를 한 화면에서 비교할 수 있도록 구성
