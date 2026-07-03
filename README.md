@@ -43,7 +43,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 **2. AI INSIGHTS 도출**
 <p>
-  <img src="docs/images/signup_insights.png" alt="AI 인사이트 대시보드" width="70%">
+  <img src="docs/images/signup_insights.png" alt="AI 인사이트 대시보드" width="100%">
 </p>
 
 <p>
