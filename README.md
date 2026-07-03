@@ -17,7 +17,6 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 ### 기존 방식
 
-1. 전체 이벤트 대시보드
 <p>
   <img src="docs/images/orign_event.png" alt="이벤트 성과 대시보드" width="70%">
 </p>
@@ -29,6 +28,9 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 
 ### 구축 후
+
+**1. 전체 이벤트 대시보드**
+
 <p>
   <img src="docs/images/signup_event.png" alt="이벤트 성과 대시보드" width="70%">
 </p>
@@ -39,7 +41,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 <br>
 
-2. AI INSIGHTS 도출
+**2. AI INSIGHTS 도출**
 <p>
   <img src="docs/images/signup_insights.png" alt="AI 인사이트 대시보드" width="70%">
 </p>
@@ -50,7 +52,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 
 <br>
 
-3. 각 이벤트별 시간별 변화 차트
+**3. 각 이벤트별 시간별 변화 차트**
 <p>
   <img src="docs/images/event_timeflow.png" alt="AI 인사이트 대시보드" width="70%">
 </p>
