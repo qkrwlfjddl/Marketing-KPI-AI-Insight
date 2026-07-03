@@ -31,9 +31,7 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 </p>
 
 <p>
-  <sub>
     X축: UX 상호작용 점수 / Y축: 구매·참여 전환율 / 버블 크기: 유입·매출 규모 / 색상: 이벤트 성과 유형 또는 추천 액션 / 필터: 기간, 이벤트코드, 생성일자, 유입, 매출 규모
-  </sub>
 </p>
 
 
@@ -43,19 +41,15 @@ GA4 데이터 수집 → BigQuery KPI 집계 → 유저 군집 분석 → Vertex
 </p>
 
 <p>
-  <sub>
     Vertex AI Gemini 기반 이벤트별 성과 요약 및 실행 액션 도출 화면
-  </sub>
 </p>
 
 <p>
-  <img src="docs/images/event_timeflow.png" alt="AI 인사이트 대시보드" width="60%">
+  <img src="docs/images/event_timeflow.png" alt="AI 인사이트 대시보드" width="70%">
 </p>
 
 <p>
-  <sub>
     이벤트의 시간별 변화 추이 차트
-  </sub>
 </p>
 
 
