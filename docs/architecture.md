@@ -103,5 +103,87 @@ sequenceDiagram
 
 ---
 
-[분석 로직 보기 →](analytics-logic.md)
+## 데이터 모델
 
+개인 행동, 이벤트 성과, AI 해석을 분리해 계산 책임과 사용 목적을 명확하게 관리합니다.
+
+```mermaid
+erDiagram
+    GA4_EVENTS ||--o{ USER_GROUP : "unified_user_id"
+    GA4_EVENTS ||--o{ EVENT_KPI : "event_code"
+    USER_GROUP ||--o{ EVENT_KPI : "고객군 비중 집계"
+    EVENT_KPI ||--o{ AI_INSIGHT : "event_code + 기간"
+
+    USER_GROUP {
+        string quarter_id
+        string unified_user_id
+        int persona_group
+        string persona_name
+    }
+
+    EVENT_KPI {
+        date wdate
+        string period_type
+        string eventcode
+        int users
+        float ux_score
+        float s_cvr
+        float i_cvr
+        float rev
+        string s_quad
+        string i_quad
+    }
+
+    AI_INSIGHT {
+        date wdate
+        string eventcode
+        string insight_type
+        string ai_summary
+        string ai_insight
+    }
+```
+
+### 고객 세그먼트
+
+SQL 기준 테이블은 `KPI_USER_GROUP_DATA`입니다.
+
+| 컬럼 | 설명 |
+|---|---|
+| `quarter_id` | 세그먼트 생성 기준 분기 |
+| `unified_user_id` | `user_id` 또는 `user_pseudo_id` 기반 통합 ID |
+| `persona_group` | 최종 고객군 번호 |
+| `persona_name` | 고객군 행동 프로필 기반 이름 |
+| `updated_at` | 갱신 시각 |
+
+이벤트 세션과 사용자 단위로 조인한 뒤, 개인 정보가 아닌 이벤트별 고객군 구성비로 집계합니다.
+
+### 이벤트 KPI
+
+SQL 기준 적재 대상은 `KPI_EVENT_DATA`입니다.
+
+| 영역 | 주요 컬럼 | 역할 |
+|---|---|---|
+| 기간·식별 | `WDATE`, `period_type`, `start_date`, `end_date`, `EVENTCODE` | 이벤트와 분석 기간 식별 |
+| 성과 | `users`, `ux_score`, `s_cvr`, `i_cvr`, `rev`, `arppu` | 유입·반응·전환·매출 측정 |
+| 고객 구성 | `g1_pct` ~ `g6_pct`, `g1_name` ~ `g6_name` | 이벤트별 방문자 성향 설명 |
+| 진단 | `s_quad`, `s_act`, `i_quad`, `i_act` | 구매·참여 관점 유형과 기본 액션 |
+| 상대 비교 | `users_rank`, `rev_rank`, `ux_rank`, `s_cvr_rank`, `i_cvr_rank` | 동일 기간 전체 이벤트 내 위치 |
+
+### AI 인사이트
+
+이벤트 KPI와 AI 결과는 `EVENTCODE + period_type + 분석 기간`을 기준으로 연결합니다.
+
+| 컬럼 | 설명 |
+|---|---|
+| `INSIGHT_TYPE` | `3_MONTH`, `1_MONTH`, `1_WEEK`, `TOTAL` |
+| `AI_SUMMARY` | 이벤트 상태를 압축한 한 줄 결론 |
+| `AI_INSIGHT` | 성과 근거, 원인 가설, 실행안 |
+| `start_date`, `end_date` | 인사이트가 해석한 분석 범위 |
+
+특정 이벤트를 선택하면 KPI, 사분면, 고객군 구성, 기간별 변화와 AI 인사이트가 함께 변경됩니다.
+
+> 공개 저장소에서는 Google Cloud 프로젝트 ID, GA4 식별자, 사업부 코드, 실제 이벤트 URL과 사용자 식별 정보를 예시 값으로 치환합니다.
+
+---
+
+[분석 로직 보기 →](analytics-logic.md)
