@@ -86,7 +86,7 @@ sequenceDiagram
     participant B as BigQuery
     participant M as BigQuery ML
     participant V as Vertex AI
-    participant L as Looker Studio
+    participant L as Data Studio
 
     G->>B: 이벤트 로그 Export
     B->>B: URL·사용자·세션 정규화
