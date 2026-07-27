@@ -32,6 +32,8 @@ AI가 이벤트별 성과 원인과 다음 액션을 제안하는 마케팅 의�
 
 [설계 과정과 기술적 의사결정 보기 →](docs/implementation.md)
 
+## 한눈에 보기
+
 ```mermaid
 flowchart LR
     A["GA4<br/>원천 로그"] --> B["고객 행동<br/>피처"]
