@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # Event Intelligence
@@ -114,10 +113,9 @@ GA4 raw events
 
 | 문서 | 이런 내용이 있습니다 |
 |---|---|
-| [아키텍처](docs/architecture.md) | 데이터가 GA4에서 대시보드까지 이동하는 전체 구조 |
+| [아키텍처와 데이터 모델](docs/architecture.md) | 데이터가 GA4에서 대시보드까지 이동하는 구조와 핵심 테이블 |
 | [분석 로직](docs/analytics-logic.md) | 고객 군집, UX 점수, 전환율, 사분면의 계산 원리 |
 | [AI 인사이트 설계](docs/ai-insights.md) | AI 입력·출력, 책임 분리, 인사이트 생성 전략 |
-| [데이터 모델](docs/data-model.md) | 핵심 테이블과 컬럼, 테이블 간 연결 관계 |
 
 ---
 
