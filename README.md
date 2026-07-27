@@ -1,8 +1,6 @@
 <div align="center">
 
-# Event Intelligence
-
-### GA4 행동 로그 기반 이벤트 마케팅 의사결정 시스템
+# GA4 행동 로그 기반 이벤트 마케팅 의사결정 시스템
 
 **고객 행동 분석 · 이벤트 성과 진단 · 생성형 AI 액션 제안**
 
@@ -48,6 +46,10 @@ AI가 이벤트별 성과 원인과 다음 액션을 제안하는 마케팅 의�
 
 <p align="center">
   <img src="docs/images/signup_event.png" alt="구축 후 이벤트 분석 대시보드" width="82%">
+</p>
+
+<p align="center">
+  <img src="docs/images/signup_insights.png" alt="구축 후 이벤트 분석 대시보드" width="82%">
 </p>
 
 UX, 전환, 규모, 성과 유형과 추천 액션을 한 화면에서 비교합니다.
