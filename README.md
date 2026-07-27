@@ -34,6 +34,8 @@ AI가 이벤트별 성과 원인과 다음 액션을 제안하는 마케팅 의�
 
 ## 한눈에 보기
 
+### 아키텍처
+
 ```mermaid
 flowchart LR
     A["GA4<br/>원천 로그"] --> B["고객 행동<br/>피처"]
@@ -43,7 +45,7 @@ flowchart LR
     D --> F["고객 × 이벤트<br/>통합 피처"]
     E --> F
     F --> G["Vertex AI<br/>해석·액션"]
-    F --> H["Looker Studio"]
+    F --> H["Data Studio"]
     G --> H
 ```
 
