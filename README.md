@@ -56,7 +56,7 @@ flowchart LR
 
 [전체 시스템과 데이터 구조 보기 →](docs/architecture.md)
 
----
+<br>
 
 ## Before / After
 
