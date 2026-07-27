@@ -9,42 +9,33 @@
 ## 전체 아키텍처
 
 ```mermaid
-flowchart TB
-    subgraph Source["Source"]
+flowchart LR
+    subgraph Source["01 · Source"]
+        direction TB
         A["GA4 BigQuery Export"]
         M["이벤트 메타데이터"]
     end
 
-    subgraph Customer["Customer Intelligence · 분기"]
-        B["세션·여정 집계"]
-        C["고객 행동 피처"]
-        D["Base K-Means · 5개"]
-        E["최대 군집 Sub K-Means · 2개"]
-        F["고객군 프로필·AI 이름"]
+    subgraph Analysis["02 · Analysis"]
+        direction TB
+        B["고객 행동<br/>세션·여정 피처"]
+        C["고객군<br/>K-Means·AI 이름"]
+        D["이벤트 성과<br/>UX·전환·매출"]
+        E["이벤트 진단<br/>순위·사분면"]
     end
 
-    subgraph Event["Event Intelligence · 일"]
-        G["URL·이벤트 코드 정규화"]
-        H["3개월·1개월·주차 KPI"]
-        I["UX·구매·참여 피처"]
-        J["순위·사분면·기본 액션"]
+    subgraph Decision["03 · Decision"]
+        direction TB
+        F["고객 × 이벤트<br/>통합 피처"]
+        G["Vertex AI<br/>원인·액션"]
+        H["Looker Studio<br/>의사결정"]
     end
 
-    subgraph Decision["Decision Layer"]
-        K["이벤트별 고객군 구성"]
-        L["최종 Event Feature"]
-        V["Vertex AI 인사이트"]
-        N["Looker Studio"]
-    end
-
-    A --> B --> C --> D --> E --> F
-    A --> G --> H --> I --> J
-    M --> G
-    F --> K --> L
-    J --> L
-    L --> V
-    L --> N
-    V --> N
+    A --> B --> C --> F
+    A --> D --> E --> F
+    M --> D
+    F --> G --> H
+    F --> H
 ```
 
 ## 실행 흐름
@@ -90,39 +81,11 @@ sequenceDiagram
 ## 데이터 모델
 
 ```mermaid
-erDiagram
-    GA4_EVENTS ||--o{ USER_GROUP : "unified_user_id"
-    GA4_EVENTS ||--o{ EVENT_KPI : "event_code"
-    USER_GROUP ||--o{ EVENT_KPI : "고객군 비중 집계"
-    EVENT_KPI ||--o{ AI_INSIGHT : "event_code + 기간"
-
-    USER_GROUP {
-        string quarter_id
-        string unified_user_id
-        int persona_group
-        string persona_name
-    }
-
-    EVENT_KPI {
-        date wdate
-        string period_type
-        string eventcode
-        int users
-        float ux_score
-        float s_cvr
-        float i_cvr
-        float rev
-        string s_quad
-        string i_quad
-    }
-
-    AI_INSIGHT {
-        date wdate
-        string eventcode
-        string insight_type
-        string ai_summary
-        string ai_insight
-    }
+flowchart LR
+    A["GA4_EVENTS<br/>원천 행동"] -->|unified_user_id| B["USER_GROUP<br/>고객 세그먼트"]
+    A -->|event_code| C["EVENT_KPI<br/>이벤트 성과"]
+    B -->|고객군 구성비| C
+    C -->|이벤트·기간| D["AI_INSIGHT<br/>요약·원인·액션"]
 ```
 
 ### 고객 세그먼트
@@ -169,4 +132,3 @@ SQL 기준 적재 대상은 `KPI_EVENT_DATA`입니다.
 ---
 
 [분석 방법론 보기 →](methodology.md)
-
