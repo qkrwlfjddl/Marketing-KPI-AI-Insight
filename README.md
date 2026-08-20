@@ -11,7 +11,8 @@
   <img src="https://img.shields.io/badge/Vertex%20AI-Gemini-8E75B2?style=flat-square&logo=googlecloud&logoColor=white">
   <img src="https://img.shields.io/badge/Data%20Studio-Dashboard-4285F4?style=flat-square&logo=looker&logoColor=white">
 </p>
-<sub>OOO 교육기업 데이터를 기반으로 구현한 프로젝트입니다. 공개 문서에서는 기업명, 프로젝트 ID, 사업부 코드와 사용자 식별 정보를 비식별화했습니다.</sub>
+<sub>  실제 업무 데이터와 소스 코드는 보안상 공개하지 않습니다.
+공개 가능한 범위에서 시스템 구조, 데이터 흐름, 분석 로직 및 구현 내용을 정리했습니다.</sub>
 
 </div>
 
