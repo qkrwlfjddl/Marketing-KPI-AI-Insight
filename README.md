@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/BigQuery-Data%20Warehouse-669DF6?style=flat-square&logo=googlebigquery&logoColor=white">
   <img src="https://img.shields.io/badge/BigQuery%20ML-K--Means-4285F4?style=flat-square&logo=googlecloud&logoColor=white">
   <img src="https://img.shields.io/badge/Vertex%20AI-Gemini-8E75B2?style=flat-square&logo=googlecloud&logoColor=white">
-  <img src="https://img.shields.io/badge/Looker%20Studio-Dashboard-4285F4?style=flat-square&logo=looker&logoColor=white">
+  <img src="https://img.shields.io/badge/Data%20Studio-Dashboard-4285F4?style=flat-square&logo=looker&logoColor=white">
 </p>
 
 </div>
