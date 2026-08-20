@@ -159,10 +159,12 @@ AI에는 원천 로그가 아닌 SQL로 계산·검증된 Event Feature만 전�
 
 ## 👤 My Contribution
 
-- GA4 원천 로그를 사용자·세션·이벤트 단위로 정규화
-- 클릭·체류·스크롤·구매 행동을 고객 행동 피처로 설계
-- BigQuery ML K-Means 기반 고객 세그먼트 생성
-- 고객군과 이벤트 성과 지표를 결합한 통합 분석 피처 구성
-- SQL로 검증된 Event Feature를 AI 컨텍스트로 구성
-- Vertex AI 기반 성과 원인 분석 및 실행 액션 생성
-- 고객 행동·이벤트 성과·AI 인사이트를 하나의 분석 화면으로 연결
+| 영역 | 담당 |
+|---|---|
+| 👤 **Behavior Data** | GA4 원천 로그를 사용자·세션·이벤트 단위로 정규화 |
+| 🧩 **Feature Engineering** | 클릭·체류·스크롤·구매 행동을 고객 행동 피처로 설계 |
+| 🎯 **Segmentation** | BigQuery ML K-Means 기반 고객 세그먼트 생성 |
+| 🔗 **Feature Integration** | 고객군과 이벤트 성과 지표를 결합한 통합 분석 피처 구성 |
+| 🤖 **AI Analysis** | SQL로 검증된 Event Feature를 AI 컨텍스트로 구성 |
+| 💡 **Insight** | Vertex AI 기반 성과 원인 분석 및 실행 액션 생성 |
+| 📊 **Analytics Product** | 고객 행동·이벤트 성과·AI 인사이트를 하나의 분석 화면으로 연결 |
